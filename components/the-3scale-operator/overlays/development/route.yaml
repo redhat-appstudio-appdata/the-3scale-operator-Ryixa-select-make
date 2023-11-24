@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: the-3scale-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: the-3scale-operator
+    app.kubernetes.io/part-of: the-3scale-operator
+  name: the-3scale-operatorbrh6
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: the-3scale-operator
+    weight: 100
+status: {}

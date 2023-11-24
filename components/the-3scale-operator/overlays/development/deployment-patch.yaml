@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: the-3scale-operator
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/jkiely-tenant/the-3scale-operator/the-3scale-operator@sha256:8de06ebd61e1b9ff4ef2161bc879e2a1c43087ef3a38b5d6920d5cafea4168b7
+        name: container-image
+        resources: {}
+status: {}
